@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+header {
+  background-color: #b60eb6;
+  color: white;
+  position: fixed; /* Mantém o cabeçalho fixo no topo */
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra sutil */
+}
+
+nav {
+  max-width: 1200px; /* Limita a largura do menu */
+  margin: 0 auto; /* Centraliza o menu */
+  display: flex; /* Deixa os itens do menu em linha */
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+}
+
+nav ul {
+  list-style: none; /* Remove as bolinhas da lista */
+  display: flex;
+  gap: 30px; /* Espaçamento entre os itens do menu */
+}
+
+nav a {
+  color: white;
+  text-decoration: none; /* Remove o sublinhado dos links */
+  font-weight: bold;
+  transition: color 0.3s; /* Adiciona uma transição suave para a cor */
+  position: relative; /* Necessário para o pseudo-elemento */
+}
+
+nav a:hover {
+  color: #104646;
+}
+
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 60px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 15px; /* Espaçamento entre parágrafos */
+  max-width: 800px; /* Limita a largura do texto para melhor leitura */
+}
+
+main {
+  margin-top: 80px;
+}
+
+nav h2 {
+  font-size: 30px;
+  color: #ffffff;
+}
+
+#sobre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+}
+
+.sobre-texto {
+  flex: 1;
+  max-width: 600px;
+}
+
+.sobre-texto h3 {
+  color: #b60eb6;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.sobre-imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
+}
+
+.botao {
+  display: inline-block;
+  margin: 30px;
+  padding: 10px 20px;
+  background-color: #b60eb6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.botao:hover {
+  background-color: #104646;
+}
+
+.logo {
+  font-size: 30px;
+  color: white;
+}
+
+.bloco-formacao {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px; /* Espaçamento entre os blocos de formação */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bloco-formacao h3 {
+  color: #990d99;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.bloco-formacao ul {
+  padding-left: 20px;
+}
+
+.projetos {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
+  gap: 20px; /* Espaçamento entre os cards */
+  justify-content: center; /* Centraliza os cards */
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 280px; /* Largura fixa para os cards */
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+}
+
+.card h3 {
+  color: #680a68;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #b60eb6;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#contato {
+  background-color: #fff;
+  padding: 60px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #b60eb6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#mensagemStatus {
+  margin-top: 20px;
+}
+
+#mensagemStatus.success {
+  color: green;
+}
+
+.error {
+  color: red;
+}
+
+/* Botões de tema e meni mobile */
+.theme-toggle,
+.menu-toggle {
+  background-color: none;
+  color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+.menu-toggle {
+  display: none; /* Inicialmente escondido */
+}
+
+/* Tema escuro */
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .bloco-formacao,
+body.dark .card,
+body.dark #contato {
+  background-color: #242424;
+  color: #e0e0e0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+body.dark input,
+body.dark textarea {
+  background-color: #2e2e2e;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+body.dark .bloco-formacao h3,
+body.dark .card h3 {
+  color: #e58ce5;
+}
+
+/* Responsividade (mobile) */
+@media (max-width: 768px) {
+  nav {
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: block; /* Mostra o botão de menu em telas menores */
+  }
+
+  nav ul {
+    display: none; /* Esconde o menu em telas menores */
+    flex-direction: column;
+    gap: 15px;
+    background-color: #b60eb6;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100px;
+    padding: 20px;
+  }
+
+  nav ul.ativo {
+    display: flex; /* Mostra o menu quando ativo */
+  }
+
+  #sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
+  #contato {
+    padding: 30px;
+  }
+}

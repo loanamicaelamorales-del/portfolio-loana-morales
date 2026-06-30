@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio|Loana Morales</title>
+
+    <!-- Arquivo Css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- O conteúdo do site ficará aqui -->
+    <header>
+      <!-- Menu de Navegação -->
+      <nav>
+        <h2 class="logo">Loana Morales</h2>
+
+        <button id="menuToggle" class="menu-toggle" aria-label="Abrir menu">
+          ☰
+        </button>
+        <ul id="menuLista">
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+
+        <!--Botão de alternar tema claro/escuro-->
+        <button
+          id="themeToggle"
+          class="theme-toggle"
+          aria-label="Alternar tema"
+        >
+          🌙
+        </button>
+      </nav>
+    </header>
+    <main>
+      <section id="sobre">
+        <div class="sobre-texto">
+          <h1>Oie, me chamo Loana</h1>
+          <p>
+            Sou estudante de Engenharia de Software e estou construindo minha
+            carreira como desenvolvedora. Atualmente estou aprendendo HTML, CSS,
+            JavaScript e Java. Também gosto de academia, estudar novas
+            tecnologias e passar tempo com minha família.
+          </p>
+          <a href="#portfolio" class="botao"> Conheça meus projetos </a>
+        </div>
+        <div class="sobre-imagem">
+          <img src="imagens/loa.jpeg" alt="Foto de Loana Morales" />
+        </div>
+      </section>
+      <section id="formacao">
+        <h2>Formação</h2>
+
+        <div class="bloco-formacao">
+          <h3>Graduação</h3>
+          <p>Engenharia de Software</p>
+        </div>
+
+        <div class="bloco-formacao">
+          <h3>Cursos</h3>
+          <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Git e GitHub</li>
+          </ul>
+        </div>
+
+        <div class="bloco-formacao">
+          <h3>Idiomas</h3>
+          <ul>
+            <li>Espanhol-Nativo</li>
+            <li>Português-Fluente</li>
+            <li>Inglês-Intermediário</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="portfolio">
+        <h2>Portfólio</h2>
+        <p>Conheça meu primeiro projeto:</p>
+        <div class="projetos">
+          <div class="card">
+            <h3>Agendador de Horários</h3>
+            <p>Projeto desenvolvido em Java.</p>
+            <a
+              href="https://github.com/loanamicaelamorales-del/Agendamento-horarios"
+              target="_blank"
+              >Ver Projeto</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="contato">
+        <h2>Contato</h2>
+        <div id="mensagemStatus"></div>
+        <form id="formContato" class="form-contato">
+          <div class="campo">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required />
+          </div>
+
+          <div class="campo">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="campo">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <!-- Arquivo JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
