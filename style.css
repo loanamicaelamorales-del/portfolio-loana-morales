@@ -5,78 +5,98 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  line-height: 1.6; /* Espaçamento entre linhas */
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  background-color: #fafafa; /* Fundo geral bem claro */
+  color: #1a1d20; /* Texto num tom grafite/chumbo suave */
+  line-height: 1.6;
 }
 
 header {
-  background-color: #b60eb6;
-  color: white;
-  position: fixed; /* Mantém o cabeçalho fixo no topo */
+  background-color: #ffffff; /* Cabeçalho branco e limpo */
+  color: #1a1d20;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra sutil */
+  z-index: 1000;
+  border-bottom: 1px solid #f0f0f0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
 nav {
-  max-width: 1200px; /* Limita a largura do menu */
-  margin: 0 auto; /* Centraliza o menu */
-  display: flex; /* Deixa os itens do menu em linha */
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
+  padding: 18px 40px;
 }
 
 nav ul {
-  list-style: none; /* Remove as bolinhas da lista */
+  list-style: none;
   display: flex;
-  gap: 30px; /* Espaçamento entre os itens do menu */
+  gap: 32px;
 }
 
 nav a {
-  color: white;
-  text-decoration: none; /* Remove o sublinhado dos links */
-  font-weight: bold;
-  transition: color 0.3s; /* Adiciona uma transição suave para a cor */
-  position: relative; /* Necessário para o pseudo-elemento */
+  color: #1a1d20;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: color 0.2s ease;
 }
 
 nav a:hover {
-  color: #104646;
-}
-
-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 60px;
-}
-
-h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-p {
-  font-size: 18px;
-  margin-bottom: 15px; /* Espaçamento entre parágrafos */
-  max-width: 800px; /* Limita a largura do texto para melhor leitura */
+  color: #f2496b; /* Rosa/Red oficial Wellhub */
 }
 
 main {
   margin-top: 80px;
 }
 
-nav h2 {
-  font-size: 30px;
-  color: #ffffff;
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #1a1d20;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #1a1d20;
+  letter-spacing: -0.01em;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  max-width: 800px;
+  color: #555d66;
+}
+
+nav h2,
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #f2496b; /* Logo com a cor de destaque da marca */
+  letter-spacing: -0.5px;
 }
 
 #sobre {
@@ -92,9 +112,10 @@ nav h2 {
 }
 
 .sobre-texto h3 {
-  color: #b60eb6;
-  margin-bottom: 20px;
-  font-size: 28px;
+  color: #f2496b;
+  margin-bottom: 16px;
+  font-size: 26px;
+  font-weight: 700;
 }
 
 .sobre-imagem {
@@ -105,92 +126,114 @@ nav h2 {
 
 .sobre-imagem img {
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   height: auto;
   border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
 .botao {
   display: inline-block;
-  margin: 30px;
-  padding: 10px 20px;
-  background-color: #b60eb6;
-  color: white;
+  margin-top: 20px;
+  padding: 14px 28px;
+  background-color: #f2496b; /* Rosa Wellhub */
+  color: #ffffff;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  border-radius: 50px; /* Estilo pílula */
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(242, 73, 107, 0.25);
 }
 
 .botao:hover {
-  background-color: #104646;
-}
-
-.logo {
-  font-size: 30px;
-  color: white;
+  background-color: #d93859;
+  transform: translateY(-2px);
 }
 
 .bloco-formacao {
   background-color: #ffffff;
-  padding: 20px;
-  margin-bottom: 20px; /* Espaçamento entre os blocos de formação */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 28px;
+  margin-bottom: 20px;
+  border-radius: 16px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 .bloco-formacao h3 {
-  color: #990d99;
-  margin-bottom: 10px;
-  font-size: 24px;
+  color: #f2496b;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .bloco-formacao ul {
   padding-left: 20px;
+  color: #555d66;
 }
 
 .projetos {
   display: flex;
-  flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
-  gap: 20px; /* Espaçamento entre os cards */
-  justify-content: center; /* Centraliza os cards */
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: flex-start;
 }
 
 .card {
   background-color: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  width: 280px; /* Largura fixa para os cards */
-  transition: transform 0.3s;
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  width: calc(33.333% - 16px);
+  min-width: 280px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Levanta o card ao passar o mouse */
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.06);
+  border-color: #f2496b;
 }
 
 .card h3 {
-  color: #680a68;
-  margin-bottom: 10px;
-  font-size: 24px;
+  color: #1a1d20;
+  margin-bottom: 12px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 15px;
+  color: #66707a;
 }
 
 .card a {
   display: inline-block;
-  margin-top: 10px;
-  padding: 8px 15px;
-  background-color: #b60eb6;
-  color: white;
+  margin-top: 16px;
+  padding: 10px 20px;
+  background-color: #f2496b;
+  color: #ffffff;
   text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  border-radius: 50px;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.card a:hover {
+  background-color: #d93859;
 }
 
 #contato {
-  background-color: #fff;
-  padding: 60px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  padding: 48px;
+  border-radius: 24px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
 }
 
 .form-contato {
@@ -202,103 +245,140 @@ nav h2 {
 .campo {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 6px;
+}
+
+.campo label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1d20;
 }
 
 input,
 textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
   font-size: 16px;
+  outline: none;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #f2496b;
 }
 
 button {
-  padding: 12px 20px;
-  background-color: #b60eb6;
-  color: white;
+  padding: 14px 28px;
+  background-color: #f2496b;
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(242, 73, 107, 0.25);
+}
+
+button:hover {
+  background-color: #d93859;
+  transform: translateY(-2px);
 }
 
 #mensagemStatus {
   margin-top: 20px;
+  font-weight: 600;
 }
 
 #mensagemStatus.success {
-  color: green;
+  color: #10b981;
 }
 
 .error {
-  color: red;
+  color: #ef4444;
 }
 
-/* Botões de tema e meni mobile */
+/* Botões de tema e menu mobile */
 .theme-toggle,
 .menu-toggle {
-  background-color: none;
-  color: white;
+  background: transparent;
+  color: #1a1d20;
   border: none;
   font-size: 22px;
   cursor: pointer;
 }
+
 .menu-toggle {
-  display: none; /* Inicialmente escondido */
+  display: none;
 }
 
-/* Tema escuro */
+/* Tema escuro alternativo (caso o usuário ative no botão) */
 body.dark {
-  background-color: #121212;
+  background-color: #121519;
   color: #e0e0e0;
+}
+
+body.dark header {
+  background-color: #1a1d22;
+  border-bottom-color: #2a2d34;
+}
+
+body.dark nav a,
+body.dark h1,
+body.dark h2,
+body.dark .card h3 {
+  color: #ffffff;
+}
+
+body.dark p,
+body.dark .bloco-formacao ul {
+  color: #a0a6b0;
 }
 
 body.dark .bloco-formacao,
 body.dark .card,
 body.dark #contato {
-  background-color: #242424;
+  background-color: #1a1d22;
   color: #e0e0e0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  border-color: #2a2d34;
 }
 
 body.dark input,
 body.dark textarea {
-  background-color: #2e2e2e;
-  color: #e0e0e0;
-  border-color: #555;
-}
-
-body.dark .bloco-formacao h3,
-body.dark .card h3 {
-  color: #e58ce5;
+  background-color: #121519;
+  color: #ffffff;
+  border-color: #2a2d34;
 }
 
 /* Responsividade (mobile) */
 @media (max-width: 768px) {
   nav {
-    padding: 10px 20px;
+    padding: 16px 20px;
   }
 
   .menu-toggle {
-    display: block; /* Mostra o botão de menu em telas menores */
+    display: block;
   }
 
   nav ul {
-    display: none; /* Esconde o menu em telas menores */
+    display: none;
     flex-direction: column;
     gap: 15px;
-    background-color: #b60eb6;
+    background-color: #ffffff;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100px;
+    width: 100%;
     padding: 20px;
+    border-bottom: 2px solid #f2496b;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   }
 
   nav ul.ativo {
-    display: flex; /* Mostra o menu quando ativo */
+    display: flex;
   }
 
   #sobre {
@@ -306,12 +386,16 @@ body.dark .card h3 {
     text-align: center;
   }
 
+  .card {
+    width: 100%;
+  }
+
   h1 {
     font-size: 32px;
   }
 
   h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   section {
@@ -319,6 +403,6 @@ body.dark .card h3 {
   }
 
   #contato {
-    padding: 30px;
+    padding: 24px;
   }
 }
